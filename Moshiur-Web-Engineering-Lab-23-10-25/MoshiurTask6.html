@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Write a program to find the power of a number (without using Math.pow). -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power of a Number</title>
+</head>
+<body>
+  <h2>Find Power (a<sup>b</sup>)</h2>
+  <input type="number" id="base" placeholder="Enter base number">
+  <input type="number" id="exp" placeholder="Enter exponent">
+  <button onclick="findPower()">Calculate</button>
+  <p id="result6"></p>
+
+  <script>
+    function findPower() {
+      let base = parseFloat(document.getElementById("base").value);
+      let exp = parseInt(document.getElementById("exp").value);
+      let result = 1;
+
+      for (let i = 1; i <= exp; i++) {
+        result *= base;
+      }
+
+      document.getElementById("result6").innerText = base + " ^ " + exp + " = " + result;
+    }
+  </script>
+</body>
+</html>

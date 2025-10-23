@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Write a program to find the factorial of a number. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a Number</title>
+</head>
+<body>
+    <h2>Find Factorial</h2>
+  <input type="number" id="num1" placeholder="Enter a number">
+  <button onclick="findFactorial()">Find Factorial</button>
+  <p id="result1"></p>
+
+  <script>
+    function findFactorial() {
+      let n = parseInt(document.getElementById("num1").value);
+      let fact = 1;
+
+      for (let i = 1; i <= n; i++) {
+        fact *= i;
+      }
+
+      document.getElementById("result1").innerText = "Factorial of " + n + " = " + fact;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Write a program to reverse a number (e.g., 123 → 321). -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a Number</title>
+</head>
+<body>
+  <h2>Reverse a Number</h2>
+  <input type="number" id="num5" placeholder="Enter a number">
+  <button onclick="reverseNumber()">Reverse</button>
+  <p id="result5"></p>
+
+  <script>
+    function reverseNumber() {
+      let n = document.getElementById("num5").value;
+      let reversed = n.split('').reverse().join('');
+      document.getElementById("result5").innerText = "Reversed Number: " + reversed;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Write a program to find the sum of all numbers from 1 to n. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Numbers from 1 to n</title>
+</head>
+<body>
+  <h2>Sum from 1 to n</h2>
+  <input type="number" id="num4" placeholder="Enter a number">
+  <button onclick="findSum()">Find Sum</button>
+  <p id="result4"></p>
+
+  <script>
+    function findSum() {
+      let n = parseInt(document.getElementById("num4").value);
+      let sum = 0;
+
+      for (let i = 1; i <= n; i++) {
+        sum += i;
+      }
+
+      document.getElementById("result4").innerText = "Sum from 1 to " + n + " = " + sum;
+    }
+  </script>
+</body>
+</html>
