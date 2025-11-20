@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Book Request</title>
+
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="moshiur1.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">LB</div>
+        <div>
+          <h1>Community Library</h1>
+          <p class="lead">Request books to borrow — quick & simple</p>
+        </div>
+      </div>
+      <div style="text-align:right">
+        <div class="meta">Open to all patrons · Free</div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Form -->
+      <section class="card">
+        <h2>Book Request Form</h2>
+
+        <form id="requestForm" autocomplete="off">
+          <div class="row">
+            <label for="name">Your name</label>
+            <input id="name" maxlength="20" type="text" placeholder="Type your name (max 20)" required />
+            <div class="char-counter" id="nameCounter">0/20 characters used</div>
+          </div>
+
+          <div class="row">
+            <label for="category">Book Category</label>
+            <select id="category">
+              <option value="">-- Select category --</option>
+              <option>Fiction</option>
+              <option>Non-fiction</option>
+              <option>Technology</option>
+              <option>Science</option>
+              <option>History</option>
+              <option>Children</option>
+              <option>Art & Design</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <label for="title">Book Title</label>
+            <input id="title" type="text" placeholder="Type the book title" required />
+          </div>
+
+          <div class="controls">
+            <button id="btnRequest" type="submit">Request</button>
+            <button id="btnReset" type="button" class="btn-reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Summary -->
+      <section class="card">
+        <div class="summary-title">
+          <div>
+            <h3>Request Summary</h3>
+            <div class="meta">Submitted requests appear below</div>
+          </div>
+
+          <div style="text-align:right">
+            <div class="meta">Total Requests:</div>
+            <div id="totalCount" class="count">0</div>
+          </div>
+        </div>
+
+        <div id="summaryList" class="summary-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div id="timeDisplay">Current time: --:--:--</div>
+    </footer>
+  </div>
+
+  <!-- Link JS -->
+  <script src="moshiur1.js"></script>
+</body>
+</html>
